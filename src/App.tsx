@@ -3,6 +3,7 @@ import NavbarHeader from "./components/navbar/navbar";
 import Content from "./components/content/content.tsx";
 import ProductElement from "./components/product_element/product_element.tsx";
 import Footer from "./components/footer/footer.tsx";
+import SignIn from "./components/authentication/sign_in.tsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<NavbarHeader />}>
             <Route index element={<Content />}></Route>
             <Route path="product" element={<ProductElement />}></Route>
+            <Route path="signin" element={<SignIn />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

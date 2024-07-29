@@ -1,32 +1,33 @@
 import "./navbar.css";
-import { Container, Navbar, Nav } from "react-bootstrap";
 import { Outlet, Link } from "react-router-dom";
 
 const NavbarHeader = () => {
   return (
     <>
-      <Navbar className="header">
-        <Container fluid>
-          <div>
-            <Nav.Link as={Link} to={"/"} className="mainTextHeader">
-              FlavorParser
-            </Nav.Link>
-            <Nav.Link as={Link} to={"/product"} className="textHeader">
-              Product
-            </Nav.Link>
-            <Nav.Link as={Link} to={"/create"} className="textHeader">
-              Create
-            </Nav.Link>
-            <Nav.Link className="textHeader">Coffee Beans</Nav.Link>
-            <Nav.Link className="textHeader">About Us</Nav.Link>
-          </div>
-          <div>
-            <Nav.Link as={Link} to={"/login"} className="textHeader">
-              Log-in
-            </Nav.Link>
-          </div>
-        </Container>
-      </Navbar>
+      <div className="flex items-center justify-between bg-black">
+        <div>
+          <Link to="/" className="mainTextHeader">
+            FlavorParser
+          </Link>
+          <Link to="/product" className="textHeader">
+            Product
+          </Link>
+          <Link to="/create" className="textHeader">
+            Create
+          </Link>
+          <Link to="#" className="textHeader">
+            Coffee Beans
+          </Link>
+          <Link to="#" className="textHeader">
+            About Us
+          </Link>
+        </div>
+        <div>
+          <Link to="/signin" className="textHeader">
+            Log-in
+          </Link>
+        </div>
+      </div>
       <Outlet></Outlet>
     </>
   );
